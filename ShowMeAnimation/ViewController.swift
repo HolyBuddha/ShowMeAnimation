@@ -9,9 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var animationPropertiesLabel: UILabel!
+    @IBOutlet var animationView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        animationView.layer.cornerRadius = 20
+        animationPropertiesLabel.text = "Hello my friend\nHow is your mood?"
     }
 
 

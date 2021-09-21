@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12348CD426FA8A61006345C4 /* AnimationProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12348CD326FA8A61006345C4 /* AnimationProperties.swift */; };
+		12348CD626FA9060006345C4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12348CD526FA9060006345C4 /* DataManager.swift */; };
 		1256F89B26FA800C0033CC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1256F89A26FA800C0033CC8B /* AppDelegate.swift */; };
 		1256F89D26FA800C0033CC8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1256F89C26FA800C0033CC8B /* SceneDelegate.swift */; };
 		1256F89F26FA800C0033CC8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1256F89E26FA800C0033CC8B /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12348CD326FA8A61006345C4 /* AnimationProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationProperties.swift; sourceTree = "<group>"; };
+		12348CD526FA9060006345C4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		1256F89726FA800C0033CC8B /* ShowMeAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowMeAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1256F89A26FA800C0033CC8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1256F89C26FA800C0033CC8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				1256F89C26FA800C0033CC8B /* SceneDelegate.swift */,
 				1256F89E26FA800C0033CC8B /* ViewController.swift */,
 				1256F8A026FA800C0033CC8B /* Main.storyboard */,
+				12348CD326FA8A61006345C4 /* AnimationProperties.swift */,
+				12348CD526FA9060006345C4 /* DataManager.swift */,
 				1256F8A326FA800D0033CC8B /* Assets.xcassets */,
 				1256F8A526FA800D0033CC8B /* LaunchScreen.storyboard */,
 				1256F8A826FA800D0033CC8B /* Info.plist */,
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1256F89F26FA800C0033CC8B /* ViewController.swift in Sources */,
+				12348CD626FA9060006345C4 /* DataManager.swift in Sources */,
+				12348CD426FA8A61006345C4 /* AnimationProperties.swift in Sources */,
 				1256F89B26FA800C0033CC8B /* AppDelegate.swift in Sources */,
 				1256F89D26FA800C0033CC8B /* SceneDelegate.swift in Sources */,
 			);
@@ -296,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.holybuddha.ShowMeAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.holybuddha.ShowMeAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
