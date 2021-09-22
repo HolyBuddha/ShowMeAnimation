@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		1256F8A226FA800C0033CC8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1256F8A026FA800C0033CC8B /* Main.storyboard */; };
 		1256F8A426FA800D0033CC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1256F8A326FA800D0033CC8B /* Assets.xcassets */; };
 		1256F8A726FA800D0033CC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1256F8A526FA800D0033CC8B /* LaunchScreen.storyboard */; };
+		1E2DA96F1A3B35595BDF7DA0 /* Pods_ShowMeAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761A003D48368D8A4323C1A1 /* Pods_ShowMeAnimation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		1256F8A326FA800D0033CC8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1256F8A626FA800D0033CC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1256F8A826FA800D0033CC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1732DD64765D594C570F2CE7 /* Pods-ShowMeAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowMeAnimation.debug.xcconfig"; path = "Target Support Files/Pods-ShowMeAnimation/Pods-ShowMeAnimation.debug.xcconfig"; sourceTree = "<group>"; };
+		761A003D48368D8A4323C1A1 /* Pods_ShowMeAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShowMeAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F6DEA14E9D2F38BDE5BA09 /* Pods-ShowMeAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowMeAnimation.release.xcconfig"; path = "Target Support Files/Pods-ShowMeAnimation/Pods-ShowMeAnimation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,71 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E2DA96F1A3B35595BDF7DA0 /* Pods_ShowMeAnimation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1222676826FBAEFB00E67598 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1256F89E26FA800C0033CC8B /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1222676926FBAF6B00E67598 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12348CD326FA8A61006345C4 /* AnimationProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1222676A26FBAF8100E67598 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1256F8A026FA800C0033CC8B /* Main.storyboard */,
+				1256F8A526FA800D0033CC8B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1222676B26FBAFA100E67598 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1256F89C26FA800C0033CC8B /* SceneDelegate.swift */,
+				1256F89A26FA800C0033CC8B /* AppDelegate.swift */,
+				1256F8A826FA800D0033CC8B /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1222676C26FBAFBA00E67598 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1256F8A326FA800D0033CC8B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1222676D26FBB00500E67598 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				12348CD526FA9060006345C4 /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		1256F88E26FA800C0033CC8B = {
 			isa = PBXGroup;
 			children = (
 				1256F89926FA800C0033CC8B /* ShowMeAnimation */,
 				1256F89826FA800C0033CC8B /* Products */,
+				911566A8C90218DE2FCE76DA /* Pods */,
+				F155D8DC0F6843ABF45BC1F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,17 +118,31 @@
 		1256F89926FA800C0033CC8B /* ShowMeAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				1256F89A26FA800C0033CC8B /* AppDelegate.swift */,
-				1256F89C26FA800C0033CC8B /* SceneDelegate.swift */,
-				1256F89E26FA800C0033CC8B /* ViewController.swift */,
-				1256F8A026FA800C0033CC8B /* Main.storyboard */,
-				12348CD326FA8A61006345C4 /* AnimationProperties.swift */,
-				12348CD526FA9060006345C4 /* DataManager.swift */,
-				1256F8A326FA800D0033CC8B /* Assets.xcassets */,
-				1256F8A526FA800D0033CC8B /* LaunchScreen.storyboard */,
-				1256F8A826FA800D0033CC8B /* Info.plist */,
+				1222676826FBAEFB00E67598 /* ViewControllers */,
+				1222676A26FBAF8100E67598 /* Storyboards */,
+				1222676926FBAF6B00E67598 /* Models */,
+				1222676D26FBB00500E67598 /* Services */,
+				1222676C26FBAFBA00E67598 /* Resources */,
+				1222676B26FBAFA100E67598 /* SupportingFiles */,
 			);
 			path = ShowMeAnimation;
+			sourceTree = "<group>";
+		};
+		911566A8C90218DE2FCE76DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1732DD64765D594C570F2CE7 /* Pods-ShowMeAnimation.debug.xcconfig */,
+				F3F6DEA14E9D2F38BDE5BA09 /* Pods-ShowMeAnimation.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F155D8DC0F6843ABF45BC1F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				761A003D48368D8A4323C1A1 /* Pods_ShowMeAnimation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1256F8AB26FA800D0033CC8B /* Build configuration list for PBXNativeTarget "ShowMeAnimation" */;
 			buildPhases = (
+				B977DF959AA76118DEA60671 /* [CP] Check Pods Manifest.lock */,
 				1256F89326FA800C0033CC8B /* Sources */,
 				1256F89426FA800C0033CC8B /* Frameworks */,
 				1256F89526FA800C0033CC8B /* Resources */,
+				8062DA7BF236ED314EA65659 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +211,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8062DA7BF236ED314EA65659 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShowMeAnimation/Pods-ShowMeAnimation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShowMeAnimation/Pods-ShowMeAnimation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShowMeAnimation/Pods-ShowMeAnimation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B977DF959AA76118DEA60671 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShowMeAnimation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1256F89326FA800C0033CC8B /* Sources */ = {
@@ -291,12 +407,13 @@
 		};
 		1256F8AC26FA800D0033CC8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1732DD64765D594C570F2CE7 /* Pods-ShowMeAnimation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q3NH456PVT;
-				INFOPLIST_FILE = ShowMeAnimation/Info.plist;
+				INFOPLIST_FILE = ShowMeAnimation/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,12 +427,13 @@
 		};
 		1256F8AD26FA800D0033CC8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3F6DEA14E9D2F38BDE5BA09 /* Pods-ShowMeAnimation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q3NH456PVT;
-				INFOPLIST_FILE = ShowMeAnimation/Info.plist;
+				INFOPLIST_FILE = ShowMeAnimation/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

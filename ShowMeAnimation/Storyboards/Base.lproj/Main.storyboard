@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShowMeAnimation" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Py-5N-61U" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="87" y="100" width="240" height="130"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vjg-ew-tBo">
+                                        <rect key="frame" x="16.000000000000004" y="8" width="37.333333333333343" height="114"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVw-62-WOP" userLabel="nameOfPresetLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="37.333333333333336" height="14.666666666666666"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huB-m3-lgd" userLabel="nameOfCurveLabel">
+                                                <rect key="frame" x="0.0" y="24.666666666666657" width="37.333333333333336" height="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83O-tp-hag" userLabel="valueOfForceLabel">
+                                                <rect key="frame" x="0.0" y="49.666666666666657" width="37.333333333333336" height="14.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2J-Xo-0uY" userLabel="valueOfDurationLabel">
+                                                <rect key="frame" x="0.0" y="74.333333333333343" width="37.333333333333336" height="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNT-5V-FnR" userLabel="valueOfDelayLabel">
+                                                <rect key="frame" x="0.0" y="99.333333333333343" width="37.333333333333336" height="14.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Isy-y6-Zbv"/>
+                                    <constraint firstAttribute="bottom" secondItem="vjg-ew-tBo" secondAttribute="bottom" constant="8" id="Iy3-UR-seJ"/>
+                                    <constraint firstItem="vjg-ew-tBo" firstAttribute="top" secondItem="6Py-5N-61U" secondAttribute="top" constant="8" id="jnL-bb-ftP"/>
+                                    <constraint firstItem="vjg-ew-tBo" firstAttribute="leading" secondItem="6Py-5N-61U" secondAttribute="leading" constant="16" id="v8c-Iv-6Tv"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGB-iu-UZP" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="119.66666666666667" y="606" width="174.66666666666663" height="30"/>
+                                <color key="backgroundColor" red="0.99214893579483032" green="0.62139099836349487" blue="0.010215847752988338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zZN-ju-OfA"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Run"/>
+                                <connections>
+                                    <action selector="runAnimationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WrB-wr-Piw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Py-5N-61U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FuU-Ix-rkQ"/>
+                            <constraint firstItem="bGB-iu-UZP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.422667" id="PT9-ad-uSc"/>
+                            <constraint firstItem="bGB-iu-UZP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TUV-7S-ZY4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bGB-iu-UZP" secondAttribute="bottom" constant="100" id="fTa-N5-jab"/>
+                            <constraint firstItem="6Py-5N-61U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="mNI-8S-iE2"/>
+                            <constraint firstItem="6Py-5N-61U" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="orh-HM-Ip7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="6Py-5N-61U" id="LOG-Cp-Xbw"/>
+                        <outlet property="nameOfCurveLabel" destination="huB-m3-lgd" id="OKf-yy-uvx"/>
+                        <outlet property="nameOfPresetLabel" destination="zVw-62-WOP" id="aao-t9-xPn"/>
+                        <outlet property="runAnimationButton" destination="bGB-iu-UZP" id="dJi-My-c2p"/>
+                        <outlet property="valueOfDelayLabel" destination="iNT-5V-FnR" id="le7-C3-eZN"/>
+                        <outlet property="valueOfDurationLabel" destination="f2J-Xo-0uY" id="MWU-kA-hCb"/>
+                        <outlet property="valueOfForceLabel" destination="83O-tp-hag" id="WDt-4h-qn7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="76.630434782608702"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -10,6 +10,9 @@ import Foundation
 class DataManager {
     static let shared = DataManager()
     
-    let animationPresets = ["hi", "hello"]
+    let animationPresets = ["", "hello"]
     let animationCurves = ["22", "33"]
 }
+
+
+
