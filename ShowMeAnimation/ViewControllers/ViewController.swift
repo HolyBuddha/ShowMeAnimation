@@ -9,6 +9,9 @@ import Spring
 
 class ViewController: UIViewController {
     
+    var firstAnimation = AnimationProperties()
+    var randomAnimationFromButton = AnimationProperties()
+    
     @IBOutlet var nameOfPresetLabel: UILabel!
     @IBOutlet var nameOfCurveLabel: UILabel!
     @IBOutlet var valueOfForceLabel: UILabel!
@@ -16,11 +19,55 @@ class ViewController: UIViewController {
     @IBOutlet var valueOfDelayLabel: UILabel!
     
     @IBOutlet var animationView: SpringView!
-    
     @IBOutlet var runAnimationButton: SpringButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        firstAnimation = getRandomAnimation()
+        animationView.layer.cornerRadius = 20
+        runAnimationButton.layer.cornerRadius = 5
+        getValuesForLabels(setAnimation: firstAnimation)
+    }
+
+    @IBAction func runAnimationButton(_ sender: SpringButton) {
+        
+        if runAnimationButton.titleLabel?.text == "Run" {
+            
+            randomAnimationFromButton = getRandomAnimation()
+            
+            animationView.animation = firstAnimation.preset
+            animationView.curve = firstAnimation.curve
+            animationView.force = firstAnimation.force
+            animationView.duration = firstAnimation.duration
+            animationView.delay = firstAnimation.delay
+
+            runAnimationButton.setTitle("Run \(randomAnimationFromButton.preset)", for: .normal)
+            
+            animationView.animate()
+            
+        } else {
+            
+            animationView.animation = randomAnimationFromButton.preset
+            animationView.curve = randomAnimationFromButton.curve
+            animationView.force = randomAnimationFromButton.delay
+            animationView.duration = randomAnimationFromButton.duration
+            animationView.delay = randomAnimationFromButton.delay
+            
+            getValuesForLabels(setAnimation: randomAnimationFromButton)
+            
+            randomAnimationFromButton = getRandomAnimation()
+            
+            runAnimationButton.setTitle("Run \(randomAnimationFromButton.preset)", for: .normal)
+            
+            
+
+        
+        animationView.animate()
+    }
     
-    func getRandomAnimation() -> AnimationProperties {
+        
+}
+    private func getRandomAnimation() -> AnimationProperties {
         var animationValues = AnimationProperties()
         animationValues.preset = Spring.AnimationPreset.allCases.randomElement()?.rawValue ?? ""
         animationValues.curve = Spring.AnimationCurve.allCases.randomElement()?.rawValue ?? ""
@@ -38,45 +85,4 @@ class ViewController: UIViewController {
         valueOfDurationLabel.text = "Duration: " + String(format: "%.2f", valueForLabels.duration)
         valueOfDelayLabel.text = "Delay " + String(format: "%.2f", valueForLabels.delay)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let first = getRandomAnimation()
-        animationView.layer.cornerRadius = 20
-        runAnimationButton.layer.cornerRadius = 5
-        getValuesForLabels(setAnimation: first)
-        
-    }
-
-    @IBAction func runAnimationButton(_ sender: SpringButton) {
-        
-        let firstAnimationFromButton = getRandomAnimation()
-        let randomAnimationFromButton = getRandomAnimation()
-    
-        if runAnimationButton.titleLabel?.text == "Run" {
-            animationView.animation = firstAnimationFromButton.preset
-           animationView.curve = firstAnimationFromButton.curve
-           animationView.force = firstAnimationFromButton.delay
-           animationView.duration = firstAnimationFromButton.duration
-           animationView.delay = firstAnimationFromButton.delay
-
-            runAnimationButton.setTitle("Run \(firstAnimationFromButton.preset)", for: .normal)
-        } else {
-            
-            runAnimationButton.setTitle("Run \(randomAnimationFromButton.preset)", for: .normal)
-            
-            animationView.animation = randomAnimationFromButton.preset
-            animationView.curve = randomAnimationFromButton.curve
-            animationView.force = randomAnimationFromButton.delay
-            animationView.duration = randomAnimationFromButton.duration
-            animationView.delay = randomAnimationFromButton.delay
-            
-            getValuesForLabels(setAnimation: randomAnimationFromButton)
-            
-
-        
-        animationView.animate()
-    }
-    
-}
 }
